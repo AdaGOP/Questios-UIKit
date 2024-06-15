@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uOX-wa-ObE">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quests-->
+        <scene sceneID="ydj-9h-wjN">
+            <objects>
+                <viewController id="uOX-wa-ObE" customClass="QuestsViewController" customModule="Questios_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rWx-kx-3Pq" customClass="QuestsView" customModule="Questios_UIKit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xJw-aO-hbd">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Wr-c0-bME"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Wr-c0-bME" firstAttribute="bottom" secondItem="xJw-aO-hbd" secondAttribute="bottom" id="99u-lG-jpD"/>
+                            <constraint firstItem="xJw-aO-hbd" firstAttribute="top" secondItem="5Wr-c0-bME" secondAttribute="top" id="VAi-6I-Fgq"/>
+                            <constraint firstItem="5Wr-c0-bME" firstAttribute="trailing" secondItem="xJw-aO-hbd" secondAttribute="trailing" id="ibQ-7g-aQc"/>
+                            <constraint firstItem="xJw-aO-hbd" firstAttribute="leading" secondItem="5Wr-c0-bME" secondAttribute="leading" id="sWG-pM-0IW"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="questsTableView" destination="xJw-aO-hbd" id="ezU-uY-Pk3"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quests" id="a8A-tx-7Ai">
+                        <barButtonItem key="backBarButtonItem" title=" " id="txj-y4-8lp"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="questsView" destination="rWx-kx-3Pq" id="CFP-GJ-B7e"/>
+                        <segue destination="7CL-Ei-mdC" kind="show" identifier="toDetail" id="Z17-Wr-HE4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbS-83-1u3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2521" y="30"/>
+        </scene>
+        <!--QuestDetailView-->
+        <scene sceneID="pkQ-4F-uDf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QuestDetailView" id="7CL-Ei-mdC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vOv-Bw-8BZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBU-sD-oDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3248" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
